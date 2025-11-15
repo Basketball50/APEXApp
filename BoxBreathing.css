@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+:root {
+  --grad-start: #4facfe;
+  --grad-end: #8e44ad;
+  --panel-bg: rgba(0, 0, 0, 0.75);
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: black;
+  color: white;
+}
+
+.boxbreathing-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  flex-direction: column;
+}
+
+.instruction-box {
+  background: var(--panel-bg);
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 700px;
+  width: 100%;
+  text-align: left;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+.instruction-box h2 {
+  font-size: 2.2rem;
+  margin-bottom: 16px;
+}
+
+.instruction-box p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #e8e8e8;
+  margin-bottom: 24px;
+}
+
+.button-row {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+.next-btn, .skip-btn, .end-session-btn, .back-btn {
+  border: none;
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 14px 24px;
+  cursor: pointer;
+}
+
+.next-btn {
+  background: linear-gradient(90deg, var(--grad-start), var(--grad-end));
+  color: white;
+}
+
+.skip-btn {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.timer-select-box {
+  background: var(--panel-bg);
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+.timer-select-box h2 {
+  font-size: 2rem;
+  margin-bottom: 24px;
+}
+
+.time-picker {
+  width: 75px;
+  font-size: 2rem;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  text-align: center;
+  margin-right: 8px;
+}
+
+.minutes-label {
+  font-size: 1.8rem;
+  color: #e8e8e8;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.box-start-session-btn {
+  margin: 24px auto 0 auto;
+  background: linear-gradient(90deg, var(--grad-start), var(--grad-end));
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 16px 32px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  display: block;
+  max-width: 300px;
+  transition: transform 0.2s ease;
+}
+
+.box-start-session-btn:hover {
+  transform: scale(1.05);
+}
+
+.session-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.session-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.breathing-box {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  border-radius: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+}
+
+.left-text, .right-text, .top-text, .bottom-text {
+  position: absolute;
+  font-weight: 700;
+  font-size: 1.25rem;
+  background: linear-gradient(90deg, var(--grad-start), var(--grad-end));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0.4;
+  transition: opacity 0.3s;
+}
+
+.left-text { left: 12px; top: 50%; transform: translateY(-50%) rotate(-90deg); }
+.right-text { right: 12px; top: 50%; transform: translateY(-50%) rotate(-90deg); }
+.top-text { top: 12px; left: 50%; transform: translateX(-50%); }
+.bottom-text { bottom: 12px; left: 50%; transform: translateX(-50%); }
+
+.left-text.active,
+.right-text.active,
+.top-text.active,
+.bottom-text.active {
+  opacity: 1;
+}
+
+.time-center {
+  font-size: 4rem;
+  font-weight: 800;
+  color: white;
+}
+
+.end-session-btn {
+  margin-top: 20px;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 12px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.session-complete {
+  background: var(--panel-bg);
+  padding: 48px;
+  border-radius: 20px;
+  max-width: 700px;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+.session-complete h2 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.session-complete p {
+  color: #e6e6e6;
+  margin-bottom: 20px;
+}
+
+.done-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+@media (max-width: 900px) {
+  .breathing-box {
+    width: 340px;
+    height: 340px;
+  }
+  .time-center {
+    font-size: 3rem;
+  }
+  .instruction-box, .timer-select-box, .session-complete {
+    width: calc(100% - 40px);
+    padding: 24px;
+  }
+  .start-session-btn {
+    width: 100%;
+  }
+}

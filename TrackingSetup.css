@@ -1,0 +1,221 @@
+.tracking-setup {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+}
+
+.tracking-overlay {
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 24px;
+  padding: 50px 60px;
+  text-align: center;
+  max-width: 900px;
+  width: 90%;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.top-back-button {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  background: rgba(255, 255, 255, 0.8);
+  color: #111;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.top-back-button:hover {
+  background: #fff;
+  transform: scale(1.05);
+}
+
+.setup-title {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 40px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.setup-subtitle {
+  color: #e6f7ff;
+  font-size: 2.2rem;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+.setup-note {
+  color: #d1ecf1;
+  font-size: 0.9rem;
+  margin-bottom: 30px;
+}
+
+.option-container,
+.time-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.option-card,
+.time-card {
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #111;
+  padding: 20px 50px;
+  border-radius: 14px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 150px;
+  position: relative;
+}
+
+.option-card:hover,
+.time-card:hover {
+  transform: translateY(-5px);
+  background-color: #ffffff;
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+}
+
+.option-card.selected,
+.time-card.selected {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(79, 172, 254, 0.4);
+}
+
+.continue-button {
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+  color: white;
+  padding: 15px 60px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+.continue-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 242, 254, 0.4);
+}
+
+.single-center {
+  justify-content: center;
+}
+
+.info-icon {
+  font-size: 1rem;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  border-radius: 50%;
+  padding: 3px 8px;
+  margin-left: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  position: relative;
+}
+
+.inline-info-box {
+  position: absolute;
+  top: -10px;
+  right: -260px;
+  width: 240px;
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  border-radius: 10px;
+  padding: 10px 15px;
+  font-size: 0.9rem;
+  text-align: left;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
+}
+.inline-info-box::before {
+  content: "";
+  position: absolute;
+  left: -8px;
+  top: 15px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 8px solid rgba(0, 0, 0, 0.85);
+}
+
+
+.time-card.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+.time-card.disabled:hover {
+  background-color: rgba(255, 255, 255, 0.85);
+  transform: none;
+}
+
+
+.custom-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 8px 10px;
+  border-radius: 10px;
+}
+
+.custom-input {
+  width: 90px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-weight: 700;
+  text-align: right;
+}
+
+.custom-suffix {
+  font-weight: 700;
+  opacity: 0.8;
+}
+
+
+.stepper-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: none;
+  font-size: 20px;
+  font-weight: 800;
+  cursor: pointer;
+  color: #111;
+  background: #e9f4ff;
+  transition: transform 0.1s, background 0.2s;
+}
+.stepper-btn:hover {
+  transform: translateY(-1px);
+  background: #ffffff;
+}
+
+.custom-hint {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: #e6f7ff;
+  opacity: 0.9;
+}

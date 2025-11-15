@@ -1,0 +1,118 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+
+.whyapex-page {
+  background-color: black;
+  width: 100%;
+  min-height: 100vh;
+  color: white;
+  padding-bottom: 100px;
+}
+
+
+.whyapex-main-title {
+  font-size: 4rem;
+  font-weight: 400;
+  color: white;
+  padding: 80px 20px 20px 20px;
+  opacity: 0;
+  animation: fadeIn 1.5s forwards;
+  border-bottom: 3px solid white;
+
+  
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+
+.feature {
+  max-width: 500px;
+  margin: 100px 0;
+  padding: 30px 25px;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.05);
+  opacity: 0;
+  transition: all 0.8s ease-out;
+}
+
+
+.left {
+  transform: translateX(-20px);
+  text-align: left;
+  margin-left: 5%;
+}
+
+.left.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+
+.right {
+  transform: translateX(20px);
+  text-align: left; 
+  margin-left: auto;
+  margin-right: 5%;
+}
+
+.right.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+
+.center {
+  max-width: 600px;
+  margin: 150px auto;
+  padding: 40px;
+  text-align: center;
+  background-color: rgba(173, 216, 230, 0.05);
+  border-radius: 12px;
+}
+
+.center.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.feature-title {
+  font-size: 1.9rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+  background: linear-gradient(90deg, #4facfe, #9b5de5); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.feature ul {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  padding-left: 20px;
+  list-style: disc;
+}
+
+.feature ul li {
+  margin-bottom: 10px;
+}
