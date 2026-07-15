@@ -108,3 +108,7 @@ Posture issues → PMR or Mindful Stretching
 High fatigue/stress → longer break (e.g., short walk, power nap)
 
 End or let the timer expire to see Session Summary. Use Dashboard and Performance Stats to view trends.
+
+## Doctronic Update Smoke Test
+
+This line verifies that Doctronic can pull a fresh APEX commit and update the KB.
